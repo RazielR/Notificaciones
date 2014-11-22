@@ -29,7 +29,7 @@ var app = {
         listeningElement.setAttribute('style', 'display:none;'); 
         receivedElement.setAttribute('style', 'display:block;');
 		
-        console.log('Received Event: ' + id);
+        console.log('Mensaje Recibido: ' + id);
     },
     // result contains any message sent from the plugin call
     successHandler: function(result) {
@@ -53,7 +53,7 @@ var app = {
 
             case 'message':
                 // this is the actual push notification. its format depends on the data model from the push server
-                alert('message = '+e.message+' msgcnt = '+e.msgcnt);
+                alert('Mensaje = '+e.message+');
                 break;
 
             case 'error':
@@ -61,7 +61,7 @@ var app = {
                 break;
 
             default:
-                alert('An unknown GCM event has occurred');
+                alert('Error Desconocido');
                 break;
         }
     }
